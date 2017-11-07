@@ -24,6 +24,7 @@ $(document).on("click", ".userButton", (function (event) {
         url: "https://api.giphy.com/v1/gifs/search?api_key=B03Xe9kHpe1ifHmZgVVPHnImU6fW8RE3&q=" + clicked + "&limit=10&offset=0&rating=PG-13&lang=en",
         method: "GET"
     }).done(function (response) {
+        $("#giphArea").html("");
 
         for (var i = 0; i < response.data.length; i++) {
 
